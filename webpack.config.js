@@ -9,6 +9,9 @@ var config = {
   resolve: {
     root: __dirname + '/src/',
   },
+  devServer: {
+      historyApiFallback: true,
+  },
   module: {
     noParse: [],
     loaders: [

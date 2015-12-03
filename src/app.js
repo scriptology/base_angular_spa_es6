@@ -5,11 +5,17 @@ export default require('angular')
     require('angular-ui-router'),
     // @TODO: It's a hack! https://github.com/ocombe/ocLazyLoad/issues/179
     (() => { require('oclazyload'); return 'oc.lazyLoad' })(),
-    /*
-      uncomment to move msg-store to bundle.js only instead
-      of putting it in both: 3.bundle.js and 4.bundle.js
-     */
+
+    // --- require commons  ---
     //require('commons/msg-store').name,
+
+    // --- require global directives ---
+    //require('./directives/globaltest/globaltest.directive').name,
+    require('./directives/main_menu/mainmenu.directive').name,
+
+    // --- require routings ---
     require('./pages/home/home.routing').name,
     require('./pages/messages/messages.routing').name,
+    require('./pages/news/news.routing').name,
+
   ]);

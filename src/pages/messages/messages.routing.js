@@ -1,6 +1,7 @@
 'use strict';
 
-function messagesRouting($stateProvider) {
+function messagesRouting($urlRouterProvider, $stateProvider) {
+  //$locationProvider.html5Mode(true);
   $stateProvider
     .state('messages', {
       url: '/messages',
