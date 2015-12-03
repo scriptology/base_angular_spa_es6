@@ -16,3 +16,4 @@ npm install && npm run devs
 ## Article
 
 Here's my [Lazy load AngularJS with Webpack](http://michalzalecki.com/lazy-load-angularjs-with-webpack/)
+# base_angular_spa_es6
