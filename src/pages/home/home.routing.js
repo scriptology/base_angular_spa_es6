@@ -1,7 +1,7 @@
 'use strict';
 
 function homeRouting($urlRouterProvider, $stateProvider, $locationProvider) {
-  $locationProvider.html5Mode(true); 
+  $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/home');
 
   $stateProvider

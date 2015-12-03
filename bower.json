@@ -1,0 +1,19 @@
+{
+  "name": "allure_spa_2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/scriptology/base_angular_spa_es6",
+  "authors": [
+    "Andrey Soloviev <andreysoloweb@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

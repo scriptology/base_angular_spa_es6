@@ -1,0 +1,7 @@
+/*body {
+    background-color: #B3C1B9;
+}*/
+
+:local(body) {
+    background-color: #B3C1B9;
+}

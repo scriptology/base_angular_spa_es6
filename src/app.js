@@ -17,5 +17,4 @@ export default require('angular')
     require('./pages/home/home.routing').name,
     require('./pages/messages/messages.routing').name,
     require('./pages/news/news.routing').name,
-
   ]);
