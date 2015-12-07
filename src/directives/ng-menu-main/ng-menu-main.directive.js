@@ -14,5 +14,5 @@ function mainMenu() {
 
 
 export default angular
-  .module('mainmenu.directive', [])
-  .directive('mainMenu', mainMenu);
+  .module('ng-menu-main.directive', [])
+  .directive('ngMenuMain', mainMenu);

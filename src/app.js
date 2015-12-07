@@ -1,5 +1,7 @@
 'use strict';
 
+require('./styles/importer.sass');
+
 export default require('angular')
   .module('lazyApp', [
     require('angular-ui-router'),
@@ -11,7 +13,8 @@ export default require('angular')
 
     // --- require global directives ---
     //require('./directives/globaltest/globaltest.directive').name,
-    require('./directives/main_menu/mainmenu.directive').name,
+    require('./directives/ng-menu-main/ng-menu-main.directive').name,
+    require('./directives/ng-bottom/ng-bottom.directive').name,
 
     // --- require routings ---
     require('./pages/home/home.routing').name,

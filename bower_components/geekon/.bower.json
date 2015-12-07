@@ -1,0 +1,36 @@
+{
+  "name": "geekon",
+  "authors": [
+    "Andrey Soloviev <andreysoloweb@gmail.com>"
+  ],
+  "description": "simple sass framework",
+  "keywords": [
+    "css",
+    "sass",
+    "grid",
+    "framework"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/scriptology/geekon",
+  "main": [
+    "dist/geekon.css",
+    "dist/geekon.min.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "55041bcdb4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "55041bcdb4efab7bcf15010eea97d33a6fc7a946"
+  },
+  "_source": "git://github.com/scriptology/geekon.git",
+  "_target": "*",
+  "_originalSource": "geekon",
+  "_direct": true
+}

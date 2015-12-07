@@ -35,23 +35,18 @@ var config = {
                 loader: 'raw'
             },
 
+            // CSS
             {
                 test: /\.css$/,
-                loader: "style!css-loader?modules"
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
 
-
-            // CSS
-            // {
-            //     test: /\.css$/,
-            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            // },
-
-            // // SASS
-            // {
-            //     test: /\.sass$/,
-            //     loader: ExtractTextPlugin.extract('css!sass?indentedSyntax')
-            // }
+            // SASS
+            {
+                test: /\.sass$/,
+                //loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
+                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax')
+            }
         ]
     },
     plugins: [

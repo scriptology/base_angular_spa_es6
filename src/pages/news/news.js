@@ -1,6 +1,6 @@
 'use strict';
 
-var css = require("./styles/news.css");
+var css = require("./styles/news.sass");
 
 export default angular
   .module('news', [

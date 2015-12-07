@@ -1,6 +1,6 @@
 'use strict';
 
-var css = require("./styles/home.css");
+var css = require("./styles/home.sass");
 
 export default angular
   .module('home', [
