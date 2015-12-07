@@ -1,6 +1,8 @@
 'use strict';
 
-import angular from 'angular';
+require("./static/styles/menu-main.sass");
+
+import angular from 'angular'; 
 
 function mainMenu() {
   return {

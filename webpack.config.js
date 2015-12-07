@@ -22,6 +22,19 @@ var config = {
         noParse: [],
         loaders: [
 
+            // FONTS & IMG
+            {
+                test: /\.(png|jpg|jpeg|svg|woff|svg|ttf|eot)([\?]?.*)$/,
+                include: /\/node_modules\//,
+                loader: "file?name=[1].[ext]&regExp=node_modules/(.*)"
+            },
+
+            {
+                test: /\.(png|jpg|jpeg|svg|woff|svg|ttf|eot)([\?]?.*)$/,
+                exclude: /\/node_modules\//,
+                loader: "file?name=[path][name].[ext]"
+            },
+
             // JS
             {
                 test: /\.js$/,
@@ -32,7 +45,7 @@ var config = {
             // HTML
             {
                 test: /\.html$/,
-                loader: 'raw'
+                loader: 'html-loader'
             },
 
             // CSS

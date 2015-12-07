@@ -1,8 +1,12 @@
-<ng-menu-main></ng-menu-main>
 
 <h1>News</h1>
 <div ui-view>
+
 {{ vm.user }}
+
+<hr>
+
+<a ui-sref="news.list.detail({id: 1000})">1. News id 1000</a>
 
 <greeting></greeting>
 
