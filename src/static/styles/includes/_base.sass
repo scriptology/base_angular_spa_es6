@@ -1,2 +1,33 @@
 body
   background-color: #fff
+
+.line
+  &--type1
+    background-color: #ccc
+    //padding: 10px
+    margin: 25px 0
+    +outer-container
+    //+pad(30px -20px 10px default)
+    +linear-gradient(to top, #6F8BB7, #B76FB7)
+    &__col
+      background-color: #ccc
+      +span-columns(4)
+      //+omega(3n)
+
+  &--type2
+    background-color: #ccc
+    margin: 25px 0
+    +outer-container(100%)
+    +linear-gradient(to top, #CCB55B, #415D3E)
+    //+row(table)
+    +row
+    &__col
+      background-color: #ccc
+      +omega(3n)
+      +span-columns(4)
+
+
+
+  // +outer-container
+  // &__col
+  //   +span-columns(3)

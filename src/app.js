@@ -1,6 +1,7 @@
 'use strict';
 
 require('./static/styles/importer.sass');
+//require('./static/styles/importer.sass');
 //require('./static/images');
 
 export default require('angular')
@@ -21,4 +22,9 @@ export default require('angular')
     require('./pages/home/home.routing').name,
     require('./pages/messages/messages.routing').name,
     require('./pages/news/news.routing').name,
+
+    // --- require controllers ---
+
+    require('./pages/news/news').name
+
   ]);

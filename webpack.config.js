@@ -2,6 +2,8 @@
 //var webpack = require("webpack");
 //var BowerWebpackPlugin = require('bower-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var bourbon = require('node-bourbon').includePaths;
+var neat = require('node-neat').includePaths;
 
 var config = {
     entry: {
@@ -49,16 +51,16 @@ var config = {
             },
 
             // CSS
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            },
+            // {
+            //     test: /\.css$/,
+            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+            // },
 
             // SASS
             {
                 test: /\.sass$/,
                 //loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
-                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax')
+                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon + '&includePaths[]=' + neat[0] + '&includePaths[]=' + neat[1])
             }
         ]
     },

@@ -50,20 +50,20 @@ function messagesRouting($urlRouterProvider, $stateProvider) {
                 });
             },
             controller: 'NewsDetailController as vm',
-            // resolve: {
-            //     loadNewsDetailController: ($q, $ocLazyLoad) => {
-            //         return $q((resolve) => {
-            //             require.ensure([], () => {
-            //                 // load only controller module
-            //                 let module = require('./controllers/news.detail.controller');
-            //                 $ocLazyLoad.load({
-            //                     dataDetail: module.dataDetail
-            //                 });
-            //                 resolve(module.controller);
-            //             })
-            //         });
-            //     }
-            // }
+            resolve: {
+                loadNewsDetailController: ($q, $ocLazyLoad) => {
+                    return $q((resolve) => {
+                        require.ensure([], () => {
+                            // load only controller module
+                            let module = require('./controllers/news.detail.controller');
+                            $ocLazyLoad.load({
+                                dataDetail: module.dataDetail
+                            });
+                            resolve(module.controller);
+                        })
+                    });
+                }
+            }
         });
 }
 
