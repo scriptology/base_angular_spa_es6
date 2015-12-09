@@ -1,6 +1,6 @@
 'use strict';
 
-var css = require("./static/styles/home.sass");
+//var css = require("./static/styles/home.sass");
 //require("./static/images/logo.png");
 
 export default angular

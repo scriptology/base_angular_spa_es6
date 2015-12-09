@@ -1,8 +1,7 @@
 'use strict';
 
+// require importer sass
 require('./static/styles/importer.sass');
-//require('./static/styles/importer.sass');
-//require('./static/images');
 
 export default require('angular')
   .module('lazyApp', [

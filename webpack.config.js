@@ -3,7 +3,6 @@
 //var BowerWebpackPlugin = require('bower-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var bourbon = require('node-bourbon').includePaths;
-var neat = require('node-neat').includePaths;
 
 var config = {
     entry: {
@@ -60,7 +59,7 @@ var config = {
             {
                 test: /\.sass$/,
                 //loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
-                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon + '&includePaths[]=' + neat[0] + '&includePaths[]=' + neat[1])
+                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon )
             }
         ]
     },
