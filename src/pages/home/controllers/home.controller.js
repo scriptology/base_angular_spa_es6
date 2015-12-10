@@ -2,7 +2,10 @@
 
 
 class HomeController {
-  constructor() {}
+  constructor() {
+
+  }
+
 }
 
 export default angular

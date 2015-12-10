@@ -15,6 +15,7 @@ export default require('angular')
     // --- require global directives ---
     //require('./directives/globaltest/globaltest.directive').name,
     require('./directives/ng-menu-main/ng-menu-main.directive').name,
+    require('./directives/ng-top-panel/ng-top-panel.directive').name,
     require('./directives/ng-bottom/ng-bottom.directive').name,
 
     // --- require routings ---

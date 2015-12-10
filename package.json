@@ -5,7 +5,7 @@
   "scripts": {
     "start": "hs build",
     "build": "webpack",
-    "dev": "webpack-dev-server --content-base build --hot --inline --devtool eval",
+    "devs": "webpack-dev-server --content-base build --hot --inline --devtool eval",
     "test": "karma start test/karma.config.js"
   },
   "author": "Michal Zalecki <michal@michalzalecki.com>",
