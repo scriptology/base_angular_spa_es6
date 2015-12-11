@@ -1,6 +1,42 @@
 .top-panel
   &__logo
-    display: inline-block
+    display: block
     margin: 0 auto
+    width: 100%
+    max-width: 460px
+    padding: 18px 0
     img
       display: block
+      width: 100%
+  &__menu
+    border-top: 1px solid $color-gray
+    border-bottom: 1px solid $color-gray
+    position: relative
+    ul
+      display: block
+      text-align: center
+      li
+        display: inline-block
+        a
+          @extend .ArticleSection
+          display: inline-block
+          font-size: 18px
+          line-height: 56px
+          color: #000
+          text-decoration: none
+  &__toggle-sidebar
+    position: absolute
+    left: 0
+    top: 0
+    width: 56px
+    height: 100%
+    background: url($imagesPath + '/toggle-sidebar.png') no-repeat 0 0
+    background-size: cover
+  &__toggle-search
+    position: absolute
+    right: 0
+    top: 0
+    width: 56px
+    height: 100%
+    background: url($imagesPath + '/toggle-search.png') no-repeat 0 0
+    background-size: cover

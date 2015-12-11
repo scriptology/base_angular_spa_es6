@@ -1,8 +1,8 @@
 
-//var webpack = require("webpack");
+var webpack = require("webpack");
 //var BowerWebpackPlugin = require('bower-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var bourbon = require('node-bourbon').includePaths;
+var bourbon = require('node-bourbon');
 
 var config = {
     entry: {
@@ -13,6 +13,7 @@ var config = {
         publicPath: '/',
         filename: 'bundle.js',
     },
+
     resolve: {
         root: __dirname + '/src/',
     },
@@ -59,11 +60,15 @@ var config = {
             {
                 test: /\.sass$/,
                 //loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
-                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon )
+                loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon.includePaths )
             }
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $:      "jquery",
+            jQuery: "jquery"
+        }),
         // new BowerWebpackPlugin({
         //     excludes: /.*\.less$/
         // }),
