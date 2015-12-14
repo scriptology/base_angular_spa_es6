@@ -6,7 +6,7 @@ var bourbon = require('node-bourbon');
 
 var config = {
     entry: {
-        app: ['./src/core/bootstrap.js'],
+        app: ['./frontend-src/core/bootstrap.js'],
     },
     output: {
         path: __dirname + '/build/',
@@ -15,7 +15,7 @@ var config = {
     },
 
     resolve: {
-        root: __dirname + '/src/',
+        root: __dirname + '/frontend-src/',
     },
     devServer: {
         historyApiFallback: true,
@@ -28,13 +28,19 @@ var config = {
             {
                 test: /\.(png|jpg|jpeg|svg|woff|svg|ttf|eot)([\?]?.*)$/,
                 include: /\/node_modules\//,
-                loader: "file?name=[1].[ext]&regExp=node_modules/(.*)"
+                loader: "file?name=images/[hash].[ext]&regExp=node_modules/(.*)"
             },
 
+            // {
+            //     test: /\.(png|jpg|jpeg|svg|woff|svg|ttf|eot)([\?]?.*)$/,
+            //     exclude: /\/node_modules\//,
+            //     loader: "file?name=[path][name].[ext]"
+            // },
+
             {
-                test: /\.(png|jpg|jpeg|svg|woff|svg|ttf|eot)([\?]?.*)$/,
-                exclude: /\/node_modules\//,
-                loader: "file?name=[path][name].[ext]"
+                test: /\.(jpe?g|png|gif|svg|woff|svg|ttf|eot)$/i,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'file?limit=1500&name=images/[hash].[ext]'
             },
 
             // JS
@@ -76,7 +82,7 @@ var config = {
         // new webpack.ProvidePlugin({
         //
         // }),
-        new ExtractTextPlugin('[name].css', {
+        new ExtractTextPlugin('styles/[name].css', {
             allChunks: true
         })
     ],
