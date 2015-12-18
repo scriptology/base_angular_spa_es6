@@ -14,12 +14,14 @@ function ngTopPanel(httpService) {
         // Categories.get({}).$promise.then(function(data) {
         //     scope.categories = data;
         // });
-
-        httpService.get("http://ekorytov.newdev.allure.ru/api/articlecategories", {}).then(function(dataResponse) {
-            console.log(dataResponse);
-        });
-
-        scope.test = '1000';
+        // 
+        // httpService.get("http://newdev.allure.ru/api/articlecategories", {}).then(function(dataResponse) {
+        //     console.log("dataResponse");
+        //     console.log(dataResponse);
+        //     scope.categories = dataResponse;
+        // });
+        //
+        // scope.test = '1000';
 
     }
   }

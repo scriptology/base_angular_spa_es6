@@ -1,11 +1,11 @@
 'use strict';
 
 import angular from 'angular';
+// var path = require('path');
 
-
-function ngModal($compile) {
+function ngDropdownEl($compile) {
     return {
-        restrict: 'EA',
+        restrict: 'A',
         scope: true,
         link: (scope, element, attrs) => {
 
@@ -19,6 +19,7 @@ function ngModal($compile) {
 
             scope.stopPropagation = function(event) {
                 if (event) {
+                    event.preventDefault();
                     event.stopPropagation();
                 }
             }
@@ -28,25 +29,24 @@ function ngModal($compile) {
                     event.preventDefault();
                     event.stopPropagation();
                 }
+                console.log("closeModal");
                 $(document).find(".js-modal").remove();
             };
 
-            $(element).on("click", function(event) {
+            $(element).on("hover", function(event) {
+
                 if (event) {
                     event.preventDefault();
                 }
 
                 scope.$apply(function(){
 
-                    var template = require(modalViewsRoot + params.template);
+                    var template = require(modalViewsRoot + "ng-dropdown-el.html");
 
                     var modalElement = angular.element(template);
 
                     element.append(modalElement)
                     $compile(modalElement)(scope);
-
-                    //$('body').addClass('-overflow');
-
 
                 });
             });
@@ -54,8 +54,8 @@ function ngModal($compile) {
     }
 }
 
-ngModal.$inject = ['$compile'];
+ngDropdownEl.$inject = ['$compile'];
 
 export default angular
-    .module('ng-modal.directive', [])
-    .directive('ngModal', ngModal);
+    .module('ng-dropdown-el.directive', [])
+    .directive('ngModal', ngDropdownEl);

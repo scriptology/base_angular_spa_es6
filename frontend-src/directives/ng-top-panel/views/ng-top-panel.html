@@ -7,12 +7,7 @@
     <div class="top-panel__menu">
         <div ng-modal data-params="{'template': 'modal-sidebar.html'}" class="top-panel__toggle-sidebar"></div>
         <ul>
-            <li><a href="#">Средства</a></li>
-            <li><a href="#">Тренды</a></li>
-            <li><a href="#">Звезды</a></li>
-            <li><a href="#">Тест-клуб</a></li>
-            <li><a href="#">Здоровье</a></li>
-            <li><a href="#">Салоны</a></li>
+            <li  ng-repeat="item in categories"><a href="#{{item.id}}">{{item.name}}</a></li>
         </ul>
         <div ng-modal data-params="{'template': 'modal-search.html'}" class="top-panel__toggle-search"></div>
     </div>

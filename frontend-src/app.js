@@ -13,7 +13,7 @@ export default require('angular')
         // @TODO: It's a hack! https://github.com/ocombe/ocLazyLoad/issues/179
         (() => {
             require('oclazyload');
-            return 'oc.lazyLoad'
+            return 'oc.lazyLoad';
         })(),
 
         // --- require commons  ---
@@ -34,6 +34,8 @@ export default require('angular')
         require('./pages/home/home.routing').name,
         require('./pages/messages/messages.routing').name,
         require('./pages/news/news.routing').name,
+        require('./pages/bpf/bpf.routing').name,
+        require('./pages/bob/bob.routing').name,
 
         // --- require controllers ---
         require('./pages/news/news').name

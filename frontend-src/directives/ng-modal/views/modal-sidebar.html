@@ -1,6 +1,58 @@
 <div class="modal--sidebar js-modal" ng-click="closeModal($event)">
     <div class="modal--sidebar__inner" ng-click="stopPropagation($event)">
         <div class="modal--sidebar__close" ng-click="closeModal($event)"></div>
-        <div>test {{text}}</div>
+
+        <a href="#" class="modal--sidebar__logo">
+            <img src="../static/images/logo-sidebar.png" alt="">
+        </a>
+
+        <div class="modal--sidebar__menu">
+            <ul>
+                <li><a ui-sref="bpf.home" ui-sref-active="-active">Beauty Product Finder</a></li>
+                <li><a ui-sref="bob.home" ui-sref-active="-active">Best of Beauty</a></li>
+                <li><a href="#">Sample Society</a></li>
+                <li><a href="#">Красота с подиума</a></li>
+                <li><a href="#">Видео</a></li>
+                <li><a href="#">Allure для iPad & iPhone</a></li>
+            </ul>
+        </div>
+
+        <div class="modal--sidebar__menu--category">
+            <ul>
+                <li ng-repeat="item in categories">
+                    <a href="#{{item.id}}">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal--sidebar__social">
+
+        </div>
+
+        <div class="modal--sidebar__subscribe">
+
+        </div>
+
+        <div class="modal--sidebar__menu--simple">
+            <ul>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Подписка на журнал</a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+                <li><a href="#">Пишите нам</a></li>
+                <li><a href="#">Реклама на сайте</a></li>
+                <li><a href="#">Реклама в журнале</a></li>
+                <li><a href="#">Редакция / Team</a></li>
+            </ul>
+        </div>
+
+        <div class="modal--sidebar__bottom">
+            <a href="#" class="modal--sidebar__logo--bottom">
+                <img src="../static/images/logo-sidebar-bottom.png" alt="">
+            </a>
+            <span class="modal--sidebar__copyright">© ЗАО «Конде Наст» 2008 –
+                2015. Все права защищены. ул. Большая Дмитровка, д. 11, стр. 7,
+                Москва, 125009</span>
+        </div>
+
     </div>
 </div>

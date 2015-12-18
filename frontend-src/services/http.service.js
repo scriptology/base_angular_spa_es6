@@ -12,12 +12,12 @@ function httpService($http) {
             }).then(function(response) {
                 //console.log("get: response success");
                 var dataResponse = response.data;
-                return dataResponse.data;
+                return dataResponse;
 
             }, function error(response) {
                 //console.log("get: response error");
                 if (response.status === 400) {
-                    scope["validationErrors"] = response.data.errors.children;
+
                 }
                 if (response.status === 401) {
                     //$state.go("login");
@@ -27,7 +27,7 @@ function httpService($http) {
                 }
 
                 if (scope) {
-                    scope.loading = false;
+
                 }
                 return false;
             });
