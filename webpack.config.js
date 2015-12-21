@@ -57,34 +57,12 @@ var config = {
                 loader: 'html-loader'
             },
 
-            // CSS
-            // {
-            //     test: /\.css$/,
-            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            // },
-
-            // {
-            //    test: /\.sass$/,
-            //    loaders: ["style", "css?sourceMap", "sass?sourceMap&indentedSyntax&includePaths[]=" + bourbon.includePaths ]
-            // },
-
-            // {
-            //     test   : /\.sass$/,
-            //     //loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap&indentedSyntax&includePaths[]=' + bourbon.includePaths ]
-            //     loader: ExtractTextPlugin.extract('style', 'css', 'resolve-url', 'sass?indentedSyntax&includePaths[]=' + bourbon.includePaths )
-            // }
 
             {
                 test: /\.sass?$/,
                 loader: ExtractTextPlugin.extract('style', '!css?sourceMap!resolve-url!sass?indentedSyntax&outputStyle=expanded&sourceMap&includePaths[]=' + encodeURIComponent(require('node-bourbon').includePaths))
             }
-            // SASS
-            // {
-            //     test: /\.sass$/,
-            //     //loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]
-            //     loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon.includePaths )
-            //     //loader: ExtractTextPlugin.extract('css!sass?indentedSyntax&includePaths[]=' + bourbon.includePaths )
-            // }
+
         ]
     },
     plugins: [

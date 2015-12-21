@@ -2,7 +2,6 @@
 
 import angular from 'angular';
 
-
 function ngModal($compile) {
     return {
         restrict: 'EA',

@@ -6,3 +6,31 @@ body
   margin: 0 auto
   width: 100%
   max-width: 1200px
+
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+
+// animation
++keyframes(slide-up)
+  0%
+    +transform(translate(-352px, 0))
+  100%
+    +transform(translate(0, 0))
+
+
++keyframes(bg-up)
+  0%
+    background: rgba(0, 0, 0, 0)
+  100%
+    background: rgba(0, 0, 0, 0.6)
