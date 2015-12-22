@@ -1,0 +1,145 @@
+.item
+  display: block
+  &__info
+    display: table-cell
+    vertical-align: top
+    width: 130px
+    vertical-align: top
+    text-align: center
+    padding-right: 15px
+    box-sizing: border-box
+  &__category
+    display: block
+    @extend .ArticleTag
+    text-transform: uppercase
+    color: $color-red
+    margin-bottom: 15px
+    padding-bottom: 15px
+    border-bottom: 1px solid $color-gray
+  &__avatar
+    display: block
+    text-align: center
+    margin-bottom: 15px
+    .picture
+      width: 50px
+  &__date
+    display: block
+    @extend .Date
+  &__name
+    display: block
+    @extend .Author
+  &__desc
+    display: block
+    @extend .ListLead
+
+  &__title
+    display: block
+    @extend .Header
+    color: $color-red
+    margin-bottom: 10px
+
+  &__section
+    display: inline-block
+    @extend .ArticleTagExtra
+    background: $color-red
+    text-transform: uppercase
+    padding: 0 5px
+    margin-bottom: 12px
+
+  &--default
+    @extend .item
+    margin: 50px 0
+    &__inner
+      display: table
+      width: 100%
+      padding-bottom: 50px
+      border-bottom: 1px solid $color-gray
+      @extend .container
+    &__picture
+      //display: table-cell
+      width: 350px
+      vertical-align: top
+      img
+        display: block
+        width: 100%
+    &__body
+      display: table-cell
+      vertical-align: top
+      padding-left: 30px
+
+  &--banner
+    margin: 0
+    background: $color-gray-light
+    padding: 50px 0
+    &__inner
+      @extend .container
+      img
+        display: block
+        width: 100%
+
+  &--medium
+    @extend .item
+    margin: 50px 0
+    &__inner
+      display: table
+      width: 100%
+      padding-bottom: 50px
+      border-bottom: 1px solid $color-gray
+      @extend .container
+    &__picture
+      img
+        display: block
+        width: 100%
+    &__body
+      padding-top: 25px
+
+  &--full
+    @extend .item
+    margin: 50px 0
+    &__inner
+      width: 100%
+    &__picture
+      img
+        display: block
+        width: 100%
+    &__body
+      @extend .container
+      text-align: center
+      border-bottom: 1px solid $color-gray
+      position: relative
+      padding-bottom: 30px
+    &__title
+      display: inline-block
+      @extend .Header
+      color: #000000
+      background: #ffffff
+      width: 70%
+      margin-top: -50px
+      padding: 20px 40px 20px
+
+  &--video-preview
+    &__picture
+      display: block
+      position: relative
+      cursor: pointer
+      img
+        display: block
+        width: 100%
+      &:after
+        content: ""
+        display: block
+        width: 25%
+        max-width: 80px
+        background: url(#{$imagesPath}/item-video-play.png) no-repeat center center
+        background-size: 100% auto
+        height: 100%
+        position: absolute
+        top: 0
+        left: 50%
+        +transform(translateX(-50%))
+    &__title
+      display: block
+      @extend .ListLead
+      @extend .size-20
+      margin-top: 15px
+      cursor: pointer

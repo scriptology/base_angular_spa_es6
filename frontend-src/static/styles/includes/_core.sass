@@ -1,6 +1,5 @@
 $imagesPath: "../images"
 
-
 // colors
 $color-gray: #cecece
 $color-gray-light: #ededed
@@ -21,10 +20,9 @@ $color-violet: #253289
   font-size: 16px
 //.BaseSERIF_PC
 .BaseMONO
-  font-family: "Secretary Regular"
+  font-family: "Secretary"
   font-size: 36px
 //.SecretaryMONO_PC
-
 
 // BaseSANS
 .ArticleSection
@@ -46,12 +44,35 @@ $color-violet: #253289
   line-height: 25px
   color: #ffffff
 
+.Date
+  @extend .BaseSANS
+  font-size: 10px
+  line-height: 14px
+  font-weight: 400
+  text-transform: uppercase
+  color: $color-gray
+
+.Author
+  @extend .BaseSANS
+  font-size: 12px
+  line-height: 14px
+  font-weight: 200
+  text-transform: uppercase
+  letter-spacing: 0.2em
+  color: $color-red
+
 .Header
   @extend .BaseSANS
   font-weight: 100
   font-size: 48px
   line-height: 50px
   letter-spacing: 0.01em
+
+.ListLead
+  @extend .BaseSANS
+  font-weight: 700
+  font-size: 20px
+  line-height: 25px
 
 .ArticleLead
   @extend .BaseSANS

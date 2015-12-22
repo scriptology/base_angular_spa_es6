@@ -34,3 +34,20 @@ body
     background: rgba(0, 0, 0, 0)
   100%
     background: rgba(0, 0, 0, 0.6)
+
+
+.other
+  @extend .container
+  &__title
+    @extend .BaseMONO
+    display: block
+    text-align: center
+    text-transform: uppercase
+    color: $color-red
+    margin-bottom: 40px
+  &__list
+    @extend .grid-g
+    @extend .-padding-x-25
+  &__col
+    @extend .col-1-3
+    @extend .padding-x-25

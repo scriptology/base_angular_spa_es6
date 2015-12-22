@@ -20,6 +20,7 @@ var config = {
     devServer: {
         historyApiFallback: true,
     },
+    watch: true,
     //devtool: "source-map", // or "inline-source-map"
     module: {
         noParse: [],
