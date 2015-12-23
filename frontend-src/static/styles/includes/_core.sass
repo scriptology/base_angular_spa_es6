@@ -8,54 +8,75 @@ $color-black: #000000
 $color-red: #e11b22
 $color-violet: #253289
 
+// media size
+$break-sm: 568px
+$break-md: 768px
+$break-lg: 1024px
+$break-xl: 1120px
+
+=respond-to($media)
+  @if $media == handhelds
+    @media only screen and (min-width: $break-sm)
+      @content
+  @else if $media == md
+    @media only screen and (min-width: $break-md)
+      @content
+  @else if $media == lg
+    @media only screen and (min-width: $break-lg)
+      @content
+  @else if $media == xl
+    @media only screen and (min-width: $break-xl)
+      @content
+
 
 .BaseSANS
   font-family: "Helvetica Neue", Helvetica, Arial
-  font-size: 16px
+  @extend .size-16
   font-weight: 200
 // .BaseSANS_PC
 //   font: 200 16px25px "Roboto", Helvetica, Arial
 .BaseSERIF
   font-family: "Palatino Linotype", "Palatino", Georgia, Times New Roman, Times
-  font-size: 16px
+  @extend .size-16
 //.BaseSERIF_PC
 .BaseMONO
   font-family: "Secretary"
   font-size: 36px
+  @extend .size-36
 //.SecretaryMONO_PC
 
 // BaseSANS
 .ArticleSection
   @extend .BaseSANS
   font-weight: 200
-  font-size: 14px
-  line-height: 25px
+  @extend .size-14
+  @extend .line-height-25
 
 .ArticleTag
   @extend .BaseSANS
   font-weight: 700
-  font-size: 14px
-  line-height: 25px
+  @extend .size-14
+  @extend .line-height-25
 
 .ArticleTagExtra
   @extend .BaseSANS
   font-weight: 700
-  font-size: 14px
-  line-height: 25px
+  @extend .size-14
+  @extend .line-height-25
   color: #ffffff
 
 .Date
   @extend .BaseSANS
-  font-size: 10px
-  line-height: 14px
+  @extend .size-10
+  @extend .line-height-14
   font-weight: 400
   text-transform: uppercase
   color: $color-gray
 
 .Author
   @extend .BaseSANS
-  font-size: 12px
-  line-height: 14px
+  @extend .size-12
+  @extend .line-height-14
   font-weight: 200
   text-transform: uppercase
   letter-spacing: 0.2em
@@ -64,71 +85,71 @@ $color-violet: #253289
 .Header
   @extend .BaseSANS
   font-weight: 100
-  font-size: 48px
-  line-height: 50px
+  @extend .size-48
+  @extend .line-height-50
   letter-spacing: 0.01em
 
 .ListLead
   @extend .BaseSANS
   font-weight: 700
-  font-size: 20px
-  line-height: 25px
+  @extend .size-20
+  @extend .line-height-25
 
 .ArticleLead
   @extend .BaseSANS
   font-weight: 700
-  font-size: 20px
-  line-height: 25px
+  @extend .size-20
+  @extend .line-height-25
 
 .ArticleBody
   @extend .BaseSANS
   font-weight: 200
-  font-size: 16px
-  line-height: 25px
+  @extend .size-16
+  @extend .line-height-25
 
 .ArticleSubHead2
   @extend .BaseSANS
   font-weight: 700
-  font-size: 18px
-  line-height: 25px
+  @extend .size-18
+  @extend .line-height-25
 
 .ArticleSubHead1
   @extend .BaseSANS
   font-weight: 700
-  font-size: 30px
-  line-height: 30px
+  @extend .size-30
+  @extend .line-height-30
 
 .ArticleSubHead1Red
   @extend .BaseSANS
   font-weight: 700
-  font-size: 30px
-  line-height: 30px
+  @extend .size-30
+  @extend .line-height-30
   color: red
 
 .ArticlePictureDesc
   @extend .BaseSANS
   font-weight: 700
-  font-size: 16px
-  line-height: 18px
+  @extend .size-16
+  @extend .line-height-18
 
 //BaseSERIF
 .ArticleQuoteStyle2_SubName
   @extend .BaseSERIF
   font-weight: 200
-  font-size: 14px
-  line-height: 18px
+  @extend .size-16
+  @extend .line-height-18
 
 .ArticleQuoteStyle2_Name
   @extend .BaseSERIF
   font-weight: 700
-  font-size: 14px
-  line-height: 18px
+  @extend .size-14
+  @extend .line-height-18
 
 .ArticleQuoteStyle2_text
   @extend .BaseSERIF
   font-weight: 700
-  font-size: 16px
-  line-height: 20px
+  @extend .size-16
+  @extend .line-height-20
   color: #fff
 
 

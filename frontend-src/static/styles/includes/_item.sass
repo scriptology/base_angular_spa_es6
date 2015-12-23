@@ -1,5 +1,11 @@
 .item
   display: block
+  &:last-child
+    border-top: 0
+    margin-bottom: 0
+    .item__inner
+      border-bottom: 0
+      padding-bottom: 0
   &__info
     display: table-cell
     vertical-align: top
@@ -8,6 +14,15 @@
     text-align: center
     padding-right: 15px
     box-sizing: border-box
+    &--line
+      display: block
+      width: auto
+      text-align: left
+      padding: 0
+      .item__date
+        display: inline-block
+      .item__name
+        display: inline-block
   &__category
     display: block
     @extend .ArticleTag
@@ -25,48 +40,70 @@
   &__date
     display: block
     @extend .Date
+  &__picture
+    img
+      display: block
+      width: 100%
   &__name
     display: block
     @extend .Author
+    text-decoration: none
   &__desc
     display: block
     @extend .ListLead
+    margin-bottom: 10px
 
   &__title
     display: block
     @extend .Header
-    color: $color-red
     margin-bottom: 10px
+    h3
+      @extend .size-40
 
   &__section
     display: inline-block
-    @extend .ArticleTagExtra
-    background: $color-red
+    @extend .ArticleTag
+    color: $color-red
     text-transform: uppercase
-    padding: 0 5px
     margin-bottom: 12px
 
+  // SIMPLE
+  &--simple
+    .item__picture
+      display: block
+      margin-bottom: 12px
+      img
+        display: block
+        width: 100%
+    .item__title
+      display: block
+      @extend .ListLead
+    .item__section
+      margin-bottom: 4px
+
+  // DEFAULT
   &--default
     @extend .item
-    margin: 50px 0
-    &__inner
+    margin-top: 50px
+    .item__inner
       display: table
       width: 100%
-      padding-bottom: 50px
       border-bottom: 1px solid $color-gray
+      padding-bottom: 50px
       @extend .container
-    &__picture
+    .item__picture
       //display: table-cell
-      width: 350px
+      width: 340px
       vertical-align: top
       img
         display: block
         width: 100%
-    &__body
+    .item__body
       display: table-cell
       vertical-align: top
       padding-left: 30px
 
+  // BANNER
   &--banner
     margin: 0
     background: $color-gray-light
@@ -77,38 +114,40 @@
         display: block
         width: 100%
 
+  // MEDIUM
   &--medium
     @extend .item
     margin: 50px 0
-    &__inner
+    .item__inner
       display: table
       width: 100%
       padding-bottom: 50px
       border-bottom: 1px solid $color-gray
       @extend .container
-    &__picture
+    .item__picture
       img
         display: block
         width: 100%
-    &__body
+    .item__body
       padding-top: 25px
 
+  // FULL
   &--full
     @extend .item
     margin: 50px 0
-    &__inner
+    .item__inner
       width: 100%
-    &__picture
+    .item__picture
       img
         display: block
         width: 100%
-    &__body
+    .item__body
       @extend .container
       text-align: center
       border-bottom: 1px solid $color-gray
       position: relative
       padding-bottom: 30px
-    &__title
+    .item__title
       display: inline-block
       @extend .Header
       color: #000000
@@ -116,7 +155,10 @@
       width: 70%
       margin-top: -50px
       padding: 20px 40px 20px
+      h3
+        @extend .size-48
 
+  // VIDEO PREVIEW
   &--video-preview
     &__picture
       display: block
@@ -140,6 +182,5 @@
     &__title
       display: block
       @extend .ListLead
-      @extend .size-20
-      margin-top: 15px
+      margin: 15px 0 25px 0
       cursor: pointer

@@ -5,7 +5,27 @@ body
   display: block
   margin: 0 auto
   width: 100%
-  max-width: 1200px
+  max-width: 1140px
+  padding: 0 20px
+  box-sizing: border-box
+
+.container
+  @extend .container
+  &--sidebar-r
+    @extend .container
+    display: table
+    .container__content
+      display: table-cell
+      vertical-align: top
+    .container__sidebar
+      display: none
+      +respond-to(md)
+        display: table-cell
+        vertical-align: top
+        width: 390px
+        padding-left: 50px
+        padding-top: 50px
+        box-sizing: border-box
 
 
 =keyframes($animation-name)
@@ -38,6 +58,7 @@ body
 
 .other
   @extend .container
+  padding-bottom: 50px
   &__title
     @extend .BaseMONO
     display: block
@@ -49,5 +70,6 @@ body
     @extend .grid-g
     @extend .-padding-x-25
   &__col
-    @extend .col-1-3
+    @extend .col-1
+    @extend .col-sm-1-3
     @extend .padding-x-25

@@ -7,8 +7,8 @@
 6 info devs angular-lazyload-webpack@1.0.0
 7 verbose unsafe-perm in lifecycle true
 8 info angular-lazyload-webpack@1.0.0 Failed to exec devs script
-9 verbose stack Error: angular-lazyload-webpack@1.0.0 devs: `webpack-dev-server --content-base -watch --hot --inline --devtool eval`
-9 verbose stack Exit status 255
+9 verbose stack Error: angular-lazyload-webpack@1.0.0 devs: `webpack-dev-server --content-base build --hot --inline --devtool eval`
+9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
 9 verbose stack     at EventEmitter.emit (events.js:172:7)
@@ -24,13 +24,13 @@
 14 error node v4.2.2
 15 error npm  v2.14.7
 16 error code ELIFECYCLE
-17 error angular-lazyload-webpack@1.0.0 devs: `webpack-dev-server --content-base -watch --hot --inline --devtool eval`
-17 error Exit status 255
-18 error Failed at the angular-lazyload-webpack@1.0.0 devs script 'webpack-dev-server --content-base -watch --hot --inline --devtool eval'.
+17 error angular-lazyload-webpack@1.0.0 devs: `webpack-dev-server --content-base build --hot --inline --devtool eval`
+17 error Exit status 1
+18 error Failed at the angular-lazyload-webpack@1.0.0 devs script 'webpack-dev-server --content-base build --hot --inline --devtool eval'.
 18 error This is most likely a problem with the angular-lazyload-webpack package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     webpack-dev-server --content-base -watch --hot --inline --devtool eval
+18 error     webpack-dev-server --content-base build --hot --inline --devtool eval
 18 error You can get their info via:
 18 error     npm owner ls angular-lazyload-webpack
 18 error There is likely additional logging output above.
