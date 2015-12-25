@@ -21,11 +21,13 @@
       padding: 0
       .item__date
         display: inline-block
+        +size(11)
       .item__name
         display: inline-block
+        +size(11)
   &__category
     display: block
-    @extend .ArticleTag
+    +ArticleTag
     text-transform: uppercase
     color: $color-red
     margin-bottom: 15px
@@ -39,30 +41,34 @@
       width: 50px
   &__date
     display: block
-    @extend .Date
+    +Date
   &__picture
     img
       display: block
       width: 100%
   &__name
     display: block
-    @extend .Author
+    +Author
     text-decoration: none
   &__desc
+    +BaseSANS
     display: block
-    @extend .ListLead
     margin-bottom: 10px
+    font-weight: bold
+    +size(16)
+    +line-height(20)
 
   &__title
     display: block
-    @extend .Header
     margin-bottom: 10px
     h3
-      @extend .size-40
+      +Header
+      +size(40)
+      +line-height(42)
 
   &__section
     display: inline-block
-    @extend .ArticleTag
+    +ArticleTag
     color: $color-red
     text-transform: uppercase
     margin-bottom: 12px
@@ -77,7 +83,7 @@
         width: 100%
     .item__title
       display: block
-      @extend .ListLead
+      +ListLead
     .item__section
       margin-bottom: 4px
 
@@ -149,14 +155,14 @@
       padding-bottom: 30px
     .item__title
       display: inline-block
-      @extend .Header
+      +Header
       color: #000000
       background: #ffffff
       width: 70%
       margin-top: -50px
       padding: 20px 40px 20px
       h3
-        @extend .size-48
+        +size(48)
 
   // VIDEO PREVIEW
   &--video-preview
@@ -181,6 +187,6 @@
         +transform(translateX(-50%))
     &__title
       display: block
-      @extend .ListLead
+      +ListLead
       margin: 15px 0 25px 0
       cursor: pointer

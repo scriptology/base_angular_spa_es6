@@ -28,53 +28,55 @@ $break-xl: 1120px
     @media only screen and (min-width: $break-xl)
       @content
 
-
-.BaseSANS
+=BaseSANS
   font-family: "Helvetica Neue", Helvetica, Arial
-  @extend .size-16
   font-weight: 200
-// .BaseSANS_PC
+
+=BaseSANS
+  font-family: "Helvetica Neue", Helvetica, Arial
+  font-weight: 200
+// %BaseSANS_PC
 //   font: 200 16px25px "Roboto", Helvetica, Arial
-.BaseSERIF
+=BaseSERIF
   font-family: "Palatino Linotype", "Palatino", Georgia, Times New Roman, Times
   @extend .size-16
-//.BaseSERIF_PC
-.BaseMONO
+//%BaseSERIF_PC
+=BaseMONO
   font-family: "Secretary"
   font-size: 36px
   @extend .size-36
 //.SecretaryMONO_PC
 
 // BaseSANS
-.ArticleSection
-  @extend .BaseSANS
+=ArticleSection
+  +BaseSANS
   font-weight: 200
   @extend .size-14
   @extend .line-height-25
 
-.ArticleTag
-  @extend .BaseSANS
+=ArticleTag
+  +BaseSANS
   font-weight: 700
   @extend .size-14
   @extend .line-height-25
 
-.ArticleTagExtra
-  @extend .BaseSANS
+=ArticleTagExtra
+  +BaseSANS
   font-weight: 700
   @extend .size-14
   @extend .line-height-25
   color: #ffffff
 
-.Date
-  @extend .BaseSANS
+=Date
+  +BaseSANS
   @extend .size-10
   @extend .line-height-14
   font-weight: 400
   text-transform: uppercase
   color: $color-gray
 
-.Author
-  @extend .BaseSANS
+=Author
+  +BaseSANS
   @extend .size-12
   @extend .line-height-14
   font-weight: 200
@@ -82,77 +84,76 @@ $break-xl: 1120px
   letter-spacing: 0.2em
   color: $color-red
 
-.Header
-  @extend .BaseSANS
+=Header
+  +BaseSANS
+  +size(48)
+  +line-height(50)
   font-weight: 100
-  @extend .size-48
-  @extend .line-height-50
   letter-spacing: 0.01em
 
-.ListLead
-  @extend .BaseSANS
-  font-weight: 700
-  @extend .size-20
-  @extend .line-height-25
+// .ListLead
+//   +BaseSANS
+//   font-weight: 700
+//   font-size: 20px
+//   // @extend .size-20
+//   // @extend .line-height-25
 
-.ArticleLead
-  @extend .BaseSANS
+=ListLead
+  +BaseSANS
   font-weight: 700
-  @extend .size-20
-  @extend .line-height-25
+  +size(20)
+  +line-height(25)
 
-.ArticleBody
-  @extend .BaseSANS
+=ArticleBody
+  +BaseSANS
   font-weight: 200
-  @extend .size-16
-  @extend .line-height-25
+  +size(16)
+  +line-height(25)
 
-.ArticleSubHead2
-  @extend .BaseSANS
+=ArticleSubHead2
+  +BaseSANS
   font-weight: 700
-  @extend .size-18
-  @extend .line-height-25
+  +size(18)
+  +line-height(25)
 
-.ArticleSubHead1
-  @extend .BaseSANS
+=ArticleSubHead1
+  +BaseSANS
   font-weight: 700
-  @extend .size-30
-  @extend .line-height-30
+  +size(30)
+  +line-height(30)
 
-.ArticleSubHead1Red
-  @extend .BaseSANS
+=ArticleSubHead1Red
+  +BaseSANS
   font-weight: 700
-  @extend .size-30
-  @extend .line-height-30
+  +size(30)
+  +line-height(30)
   color: red
 
-.ArticlePictureDesc
-  @extend .BaseSANS
+=ArticlePictureDesc
+  +BaseSANS
   font-weight: 700
-  @extend .size-16
-  @extend .line-height-18
+  +size(16)
+  +line-height(18)
 
 //BaseSERIF
-.ArticleQuoteStyle2_SubName
-  @extend .BaseSERIF
+=ArticleQuoteStyle2_SubName
+  +BaseSERIF
   font-weight: 200
-  @extend .size-16
-  @extend .line-height-18
+  +size(16)
+  +line-height(18)
 
-.ArticleQuoteStyle2_Name
-  @extend .BaseSERIF
+=ArticleQuoteStyle2_Name
+  +BaseSERIF
   font-weight: 700
-  @extend .size-14
-  @extend .line-height-18
+  +size(14)
+  +line-height(18)
 
-.ArticleQuoteStyle2_text
-  @extend .BaseSERIF
+=ArticleQuoteStyle2_text
+  +BaseSERIF
   font-weight: 700
-  @extend .size-16
-  @extend .line-height-20
+  +size(16)
+  +line-height(20)
   color: #fff
-
-
 
 .reset-this
   animation: none
